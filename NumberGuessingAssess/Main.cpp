@@ -57,18 +57,18 @@ void guess(int guessNum)
 		std::cin >> input;
 		switch (input)
 		{
-		//when the player says that "yes" the guess is correct
+			//when the player says that "yes" the guess is correct
 		case 'Y':
 			//mark the guess and the input as correct
 			guessedIt = true;
 			correctInput = true;
 			break;
-		//When the player says the system needs to guess "lower"
+			//When the player says the system needs to guess "lower"
 		case 'L':
 			//first check if the player is lying
 			switch (checkLiar())
 			{
-			//if they are indeed lying
+				//if they are indeed lying
 			case true:
 				system("cls");
 				//tell them they've been detected to be lying
@@ -78,7 +78,7 @@ void guess(int guessNum)
 				guessedIt = true;
 				correctInput = true;
 				break;
-			//if they aren't lying
+				//if they aren't lying
 			case false:
 				//adjust the field from which the system is guessing by lowering the maximum
 				maxGuess = guessNum - 1;
@@ -87,12 +87,12 @@ void guess(int guessNum)
 				break;
 			}
 			break;
-		//when the player says the system needs to guess "higher"
+			//when the player says the system needs to guess "higher"
 		case 'H':
 			//first check if the player is lying
 			switch (checkLiar())
 			{
-			//if they are indeed lying
+				//if they are indeed lying
 			case true:
 				system("cls");
 				//tell them they've been detected to be lying
@@ -102,7 +102,7 @@ void guess(int guessNum)
 				guessedIt = true;
 				correctInput = true;
 				break;
-			//if they aren't lying
+				//if they aren't lying
 			case false:
 				//adjust the field from which the system is guessing by lowering the maximum
 				minGuess = guessNum + 1;
